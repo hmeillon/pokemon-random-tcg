@@ -21,29 +21,33 @@ app.get("/", (req, res) => {
 app.post("/search", async (req, res) => {
   searched = true;
   let pokemon = req.body.name;
-  console.log(pokemon);
 
   try {
-    console.log(API_URL + pokemon);
     const response = await axios.get(API_URL + pokemon);
     const content = response.data.data;
     const random = content[Math.floor(Math.random() * content.length)];
     console.log(random);
 
+    let cardName = random.name;
+    let cardRarity = random.rarity;
+    let cardImage = random.images.large;
+    let cardReleaseDate = random.set.releaseDate;
+    let cardSellingPrice = random.cardmarket.prices.averageSellPrice;
+
     res.render("index.ejs", {
       searched: searched,
-      cardName: "Venusaur",
-      cardId: "65464",
-      cardImage: "",
-      cardReleaseDate: "Oct 06, 1995",
-      cardSellingPrice: "90.00",
+      cardName: cardName,
+      cardRarity: cardRarity,
+      cardImage: cardImage,
+      cardReleaseDate: cardReleaseDate,
+      cardSellingPrice: "Average selling price: $" + cardSellingPrice + " USD",
     });
   } catch {
     res.render("index.ejs", {
       searched: searched,
       cardName: "Card not found!",
-      cardId: "missingno",
-      cardImage: "",
+      cardRarity: "",
+      cardImage: "/images/missingno.png",
       cardReleaseDate: "",
       cardSellingPrice: "",
     });
