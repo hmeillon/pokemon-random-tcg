@@ -1,0 +1,19 @@
+<%- include("partials/homepage-header.ejs") %>
+
+<main>
+    <% if (searched === true){ %>
+    <h2><%= cardName %></h2>
+    <p><%= cardId %></p>
+    <img src="<%= cardImage %>" alt="pokémon card illustration">
+    <p><%= cardReleaseDate %></p>
+    <p>Average selling price: $<%= cardSellingPrice %> USD</p>
+    <% } else { %>
+    <h2>Enter Pokémon Name</h2>
+    <form action="/search" id="form" class="form" method="POST">
+        <input type="text" placeholder="Search" name="name" required>
+        <button type="submit">Search</button>
+    </form>
+    <% } %>
+</main>
+
+<%- include("partials/footer.ejs") %>
