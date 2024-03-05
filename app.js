@@ -39,7 +39,7 @@ app.post("/search", async (req, res) => {
       cardName: cardName,
       cardRarity: cardRarity,
       cardImage: cardImage,
-      cardReleaseDate: cardReleaseDate,
+      cardReleaseDate: "Release Date: " + cardReleaseDate,
       cardSellingPrice: "Average selling price: $" + cardSellingPrice + " USD",
     });
   } catch {

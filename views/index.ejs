@@ -7,17 +7,21 @@
 
 <main>
     <% if (searched === true){ %>
-    <h2><%= cardName %></h2>
-    <p><%= cardRarity %></p>
-    <img src="<%= cardImage %>" alt="pokémon card illustration" height="410px">
-    <p><%= cardReleaseDate %></p>
-    <p><%= cardSellingPrice %></p>
+    <div class="card-container">
+        <h2><%= cardName %></h2>
+        <p><em><%= cardRarity %></em></p>
+        <img src="<%= cardImage %>" alt="pokémon card illustration" id="cardImg">
+        <p><%= cardReleaseDate %></p>
+        <p class="price"><%= cardSellingPrice %></p>
+    </div>
     <% } else { %>
-    <h2>Enter Pokémon or Card Name</h2>
-    <form action="/search" id="form" class="form" method="POST">
-        <input type="text" placeholder="Search" name="name" required>
-        <button type="submit">Search</button>
-    </form>
+    <div class="search-bar-container">
+        <h2>Enter Pokémon or Card Name</h2>
+        <form action="/search" id="form" class="form" method="POST">
+            <input type="text" placeholder="Search" name="name" required>
+            <button type="submit" class="btn-home">Search</button>
+        </form>
+    </div>
     <% } %>
 </main>
 

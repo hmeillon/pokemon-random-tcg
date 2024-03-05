@@ -1,0 +1,143 @@
+body {
+    background-image: url("/images/background.png");
+    color: #3C3633;
+    font-family: "Lexend", sans-serif;
+    margin: 0%;
+    text-align: center;
+}
+
+nav {
+    background-color: #747264;
+    color: #EEEDEB;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 5px #3e3734;
+}
+
+footer {
+    font-size: small;
+    background-color: #EEEDEB;
+    margin-left: 15%;
+    margin-right: 15%;
+    border-left: 2px solid #3e3734;
+    border-right: 2px solid #3e3734;
+    border-bottom: 2px solid #3e3734;
+}
+
+main {
+    background-color: #EEEDEB;
+    margin-left: 15%;
+    margin-right: 15%;
+    border-radius: 2% 2% 0% 0%;
+    border-top: 2px solid #3e3734;
+    border-left: 2px solid #3e3734;
+    border-right: 2px solid #3e3734;
+}
+
+h2 {
+    margin-top: 0%;
+}
+
+#cardImg {
+    height: 410px;
+    transition: box-shadow .1s, transfrom;
+    filter: drop-shadow(0px 5px 5px #000000);
+}
+
+#cardImg:hover {
+    filter: drop-shadow(0px 0px 40px #000000);
+}
+
+
+.nav1 {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.nav2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.page-title {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.website-logo {
+    padding-right: 5px;
+}
+
+.website-logo:hover {
+    filter: drop-shadow(0px 0px 40px #000000);
+    scale: 1.1;
+}
+
+.search-bar-container {
+    padding-bottom: 425px;
+}
+
+.card-container {
+    margin-bottom: -20px;
+}
+
+.socials {
+    padding: 5px;
+}
+
+
+.btn-home {
+  background: #747264;
+  border-radius: 999px;
+  box-shadow: 0px 2px 2px #3e3734;
+  color: #EEEDEB;
+  cursor: pointer;
+  font-weight: 700;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 4px 10px;
+  user-select: none;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+}
+
+.btn-card{
+  background: #EEEDEB;
+  border-radius: 999px;
+  box-shadow: #5c5a4f 0 2px 2px;
+  color: #747264;
+  cursor: pointer;
+  font-weight: 700;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 4px 10px;
+  user-select: none;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+}
+
+.name {
+    margin-top: 0%;
+}
+
+.price {
+    padding-bottom: 25px;
+}
+
+@media (max-width: 576px) {
+    #cardImg {
+        height: 350px;
+    }
+
+    .social-logo {
+        width: 20px;
+    }
+}
