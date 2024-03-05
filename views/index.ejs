@@ -1,10 +1,11 @@
+<%# Depending if searched is true or false, it will change the navbar, since the second will move the searchbar inside the navbar. %>
 <% if (searched === true) { %>
 <%- include("partials/cardpage-header.ejs") %>
 <% } else { %>
 <%- include("partials/homepage-header.ejs") %>
 <% } %>
 
-
+<%# As mentioned before, depending if true or false, it will change the info that will appear in the main page, if false, it will show the search bar and invite the user to input something, if already searched (searched equals to true), it will show the card information in the order below. %>
 <main>
     <% if (searched === true){ %>
     <div class="card-container">

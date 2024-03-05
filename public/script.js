@@ -1,8 +1,12 @@
+//Easter Egg made for the heart inside the footer.
 document.querySelector(".e-e").addEventListener("click", function () {
   alert("You found me!🎉 I'm an easter egg! 🥚");
 });
 
+//Targeting the image of the card that is rendered in the webpage.
 const card = document.getElementById("cardImg");
+
+//Created a function that will be executed ONCE the card is fully loaded inside the webpage. This will handle the event when the mouse is hovering the card image and making it interactive.
 card.onload = function () {
   const height = card.clientHeight;
   const width = card.clientWidth;
@@ -20,6 +24,7 @@ card.onload = function () {
   });
 };
 
+//Once the mouse is out from the image, it will reset.
 card.addEventListener("mouseout", () => {
   card.style.transform = `perspective(500px) scale(1) rotateX(0) rotateY(0)`;
 });
