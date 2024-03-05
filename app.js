@@ -47,7 +47,7 @@ app.post("/search", async (req, res) => {
       searched: searched,
       cardName: "Card not found!",
       cardRarity: "",
-      cardImage: "/images/missingno.png",
+      cardImage: "/images/MissingNo.png",
       cardReleaseDate: "",
       cardSellingPrice: "",
     });
